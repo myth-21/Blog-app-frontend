@@ -12,7 +12,7 @@ function AuthorDashboard() {
   const getArticles = async () => {
     try {
       const res = await axios.get(
-        `http://localhost:4000/author-api/articles/${currentUser.email}`, // Wait, API uses authorId or email?
+        `https://blog-app-backend-ne0f.onrender.com/author-api/articles/${currentUser.email}`, // Wait, API uses authorId or email?
         { withCredentials: true }
       );
       // checking authorAPI.js:
@@ -32,7 +32,7 @@ function AuthorDashboard() {
     const fetchArticles = async () => {
       try {
         const res = await axios.get(
-            `http://localhost:4000/author-api/articles/${currentUser._id}`, // Corrected to use ID
+            `https://blog-app-backend-ne0f.onrender.com/author-api/articles/${currentUser._id}`, // Corrected to use ID
             { withCredentials: true }
         );
         if (res.status === 200) {
@@ -65,7 +65,7 @@ function AuthorDashboard() {
     
     try {
         const res = await axios.patch(
-            `http://localhost:4000/author-api/articles/${article._id}/status`,
+            `https://blog-app-backend-ne0f.onrender.com/author-api/articles/${article._id}/status`,
             { isArticleActive: newStatus },
             { withCredentials: true }
         );
