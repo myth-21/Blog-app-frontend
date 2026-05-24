@@ -5,7 +5,7 @@
 // ─── Layout ───────────────────────────────────────────
 export const pageBackground = "bg-white min-h-screen"
 export const pageWrapper    = "max-w-5xl mx-auto px-6 py-16"
-// export const section        = "mb-14"
+export const section        = "mb-14"
 
 // ─── Cards ────────────────────────────────────────────
 export const cardClass      = "bg-[#f5f5f7] rounded-2xl p-7 hover:bg-[#ebebf0] transition-colors duration-200 cursor-pointer"
