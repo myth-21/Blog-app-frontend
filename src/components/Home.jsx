@@ -35,7 +35,7 @@ function Home() {
   return (
     <div className="bg-gray-50 min-h-screen">
       {/* Hero Section */}
-      <div className="bg-gradient-to-r from-blue-600 to-indigo-700 py-20 text-center text-white">
+      <div className="bg-linear-to-r from-blue-600 to-indigo-700 py-20 text-center text-white">
         <h1 className="mb-4 text-5xl font-extrabold tracking-tight">Explore the World of Ideas</h1>
         <p className="mx-auto max-w-2xl text-xl opacity-90">
           Discover stories, thinking, and expertise from writers on any topic.
@@ -69,7 +69,7 @@ function Home() {
                 onClick={() => navigate(`/article/${article._id}`)}
                 className="group cursor-pointer overflow-hidden rounded-2xl bg-white shadow-sm transition-all hover:-translate-y-1 hover:shadow-xl border border-gray-100"
               >
-                <div className="h-48 w-full bg-gradient-to-br from-gray-100 to-gray-200 flex items-center justify-center text-gray-400 group-hover:scale-105 transition-transform">
+                <div className="h-48 w-full bg-linear-to-br from-gray-100 to-gray-200 flex items-center justify-center text-gray-400 group-hover:scale-105 transition-transform">
                     {/* Placeholder for image */}
                     <span className="text-4xl font-bold opacity-20 uppercase">{article.category}</span>
                 </div>
