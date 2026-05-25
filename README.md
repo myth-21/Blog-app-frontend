@@ -1,4 +1,4 @@
-# 📝 Blog App
+# Blog App
 
 A full-stack blog application built with React, Express.js, and MongoDB. Features user authentication, role-based access control, article management, and an admin dashboard.
 
@@ -9,30 +9,30 @@ A full-stack blog application built with React, Express.js, and MongoDB. Feature
 
 ---
 
-# 🚀 Features
+#  Features
 
-## 👤 User Management
+##  User Management
 - Secure User Registration & Login
 - JWT Authentication
 - Role-Based Access Control
 - Profile Management
 - Image Upload Support
 
-## ✍️ Content Management
+## Content Management
 - Create & Publish Articles
 - Edit/Delete Articles
 - Rich Text Content
 - Category Support
 - Comment System
 
-## 👨‍💼 Admin Dashboard
+##  Admin Dashboard
 - User Management
 - Block/Unblock Users
 - Activate/Deactivate Articles
 - Dashboard Analytics
 - Full Administrative Control
 
-## 🎨 User Interface
+##  User Interface
 - Modern Apple-Inspired UI
 - Responsive Design
 - Protected Routes
@@ -41,7 +41,7 @@ A full-stack blog application built with React, Express.js, and MongoDB. Feature
 
 ---
 
-# 📁 Repository Structure
+#  Repository Structure
 
 ```bash
 blog-app/
@@ -71,7 +71,7 @@ blog-app/
 
 ---
 
-# 🛠️ Tech Stack
+# Tech Stack
 
 ## Frontend
 - React 19
@@ -95,7 +95,7 @@ blog-app/
 
 ---
 
-# 📋 Prerequisites
+#  Prerequisites
 
 Before running the application, install:
 
@@ -105,9 +105,9 @@ Before running the application, install:
 
 ---
 
-# 📦 Install Required Packages
+#  Install Required Packages
 
-## 🚀 Backend Setup
+##  Backend Setup
 
 Move to backend folder:
 
@@ -129,7 +129,7 @@ npm install -D nodemon
 
 ---
 
-## 🎨 Frontend Setup
+##  Frontend Setup
 
 Move to frontend folder:
 
@@ -151,7 +151,7 @@ npm install -D tailwindcss @tailwindcss/vite
 
 ---
 
-# ⚙️ Tailwind CSS Configuration
+#  Tailwind CSS Configuration
 
 ## Update `vite.config.js`
 
@@ -173,9 +173,9 @@ export default defineConfig({
 
 ---
 
-# 🚀 Quick Start
+#  Quick Start
 
-## 1️⃣ Clone the Repository
+## 1️ Clone the Repository
 
 ```bash
 git clone https://github.com/BAIKANI-MANASA/Blog-App.git
@@ -184,7 +184,7 @@ cd blog-app
 
 ---
 
-## 2️⃣ Backend Environment Setup
+## 2️ Backend Environment Setup
 
 Move to backend:
 
@@ -206,7 +206,7 @@ copy .env.example .env
 
 ---
 
-## 3️⃣ Configure Environment Variables
+## 3️ Configure Environment Variables
 
 Create `.env` inside backend:
 
@@ -228,7 +228,7 @@ API_SECRET=your-cloudinary-api-secret
 
 ---
 
-# ▶️ Running the Application
+#  Running the Application
 
 ## Start Backend Server
 
@@ -260,7 +260,7 @@ http://localhost:5173
 
 ---
 
-# 👨‍💼 Default Admin Account
+#  Default Admin Account
 
 Run this in MongoDB shell:
 
@@ -286,7 +286,7 @@ Password: admin
 
 ---
 
-# 👥 User Roles
+#  User Roles
 
 | Role | Permissions |
 |------|-------------|
@@ -296,7 +296,7 @@ Password: admin
 
 ---
 
-# 🔗 API Endpoints
+#  API Endpoints
 
 ## Authentication APIs
 
@@ -344,7 +344,7 @@ Password: admin
 
 ---
 
-# 🏗️ Production Build
+#  Production Build
 
 ## Frontend Build
 
@@ -364,9 +364,9 @@ npm start
 
 ---
 
-# 🚀 Deploy Frontend on Vercel
+#  Deploy Frontend on Vercel
 
-## 1️⃣ Install Vercel CLI
+## 1️ Install Vercel CLI
 
 ```bash
 npm install -g vercel
@@ -374,7 +374,7 @@ npm install -g vercel
 
 ---
 
-## 2️⃣ Login to Vercel
+## 2️ Login to Vercel
 
 ```bash
 vercel login
@@ -382,7 +382,7 @@ vercel login
 
 ---
 
-## 3️⃣ Move to Frontend Folder
+## 3️ Move to Frontend Folder
 
 ```bash
 cd frontend
@@ -390,7 +390,7 @@ cd frontend
 
 ---
 
-## 4️⃣ Deploy Project
+## 4️ Deploy Project
 
 ```bash
 vercel
@@ -418,7 +418,7 @@ dist
 
 ---
 
-## 5️⃣ Production Deployment
+## 5️ Production Deployment
 
 ```bash
 vercel --prod
@@ -426,7 +426,7 @@ vercel --prod
 
 ---
 
-# 🌐 Frontend Environment Variables
+#  Frontend Environment Variables
 
 Create `.env` inside frontend:
 
@@ -442,7 +442,7 @@ VITE_API_URL=https://blog-app-pvm9.onrender.com
 
 ---
 
-# ⚙️ Axios Configuration Example
+#  Axios Configuration Example
 
 ```javascript
 import axios from "axios";
@@ -456,7 +456,7 @@ export default api;
 
 ---
 
-# 📄 Optional Vercel Configuration
+#  Optional Vercel Configuration
 
 Create `vercel.json` inside frontend:
 
@@ -475,7 +475,7 @@ This helps React Router work properly after deployment.
 
 ---
 
-# 🔥 Useful Vercel Commands
+# Useful Vercel Commands
 
 ## Redeploy Project
 
@@ -503,7 +503,7 @@ vercel logout
 
 ---
 
-# 🌍 Recommended Deployment Flow
+#  Recommended Deployment Flow
 
 1. Deploy Backend
 2. Copy Backend Production URL
@@ -513,13 +513,13 @@ vercel logout
 
 ---
 
-# 📝 License
+#  License
 
 This project is licensed under the ISC License.
 
 ---
 
-# 🙏 Acknowledgments
+#  Acknowledgments
 
 - React
 - Express.js
@@ -529,10 +529,8 @@ This project is licensed under the ISC License.
 
 ---
 
-# 📞 Support
+#  Support
 
 If you have any questions or need help, open an issue on GitHub.
 
 ---
-
-# 🎉 Happy Blogging!
