@@ -1,122 +1,127 @@
-# 🛠️ Blog App - Backend
+# 📝 Blog App
 
-## 📖 Overview
+A full-stack blog application built with React, Express.js, and MongoDB. Features user authentication, role-based access control, article management, and an admin dashboard.
 
-This repository contains the backend for the Blog App.
-
-It is built using:
-
-- Node.js
-- Express.js
-- MongoDB
-- Mongoose
-- JWT Authentication
-- Cloudinary Image Uploads
-
-The backend provides APIs for:
-
-- Authentication
-- User Management
-- Author Features
-- Admin Dashboard
-- Article Management
-- Comments System
+![React](https://img.shields.io/badge/React-19.2.0-blue.svg)
+![Express.js](https://img.shields.io/badge/Express.js-5.2.1-green.svg)
+![MongoDB](https://img.shields.io/badge/MongoDB-8.0-red.svg)
+![Node.js](https://img.shields.io/badge/Node.js-18+-green.svg)
 
 ---
 
 # 🚀 Features
 
-- RESTful API Architecture
+## 👤 User Management
+- Secure User Registration & Login
 - JWT Authentication
-- Role-Based Authorization
-- User Registration & Login
-- Article CRUD Operations
+- Role-Based Access Control
+- Profile Management
+- Image Upload Support
+
+## ✍️ Content Management
+- Create & Publish Articles
+- Edit/Delete Articles
+- Rich Text Content
+- Category Support
 - Comment System
-- Cloudinary Image Upload
-- Password Hashing using bcryptjs
-- Middleware Authentication
-- Admin Controls
-- MongoDB Database Integration
+
+## 👨‍💼 Admin Dashboard
+- User Management
+- Block/Unblock Users
+- Activate/Deactivate Articles
+- Dashboard Analytics
+- Full Administrative Control
+
+## 🎨 User Interface
+- Modern Apple-Inspired UI
+- Responsive Design
+- Protected Routes
+- Toast Notifications
+- Mobile Friendly
 
 ---
 
-# 📁 Project Structure
+# 📁 Repository Structure
 
 ```bash
-BLOG-APP-BACKEND/
-├── APIs/
-│   ├── AdminAPI.js
-│   ├── AuthorAPI.js
-│   ├── UserAPI.js
-│   └── CommonAPI.js
+blog-app/
+├── backend/
+│   ├── APIs/
+│   │   ├── AdminAPI.js
+│   │   ├── AuthorAPI.js
+│   │   ├── UserAPI.js
+│   │   └── CommonAPI.js
+│   ├── config/
+│   ├── middlewares/
+│   ├── models/
+│   ├── services/
+│   └── server.js
 │
-├── config/
-│   ├── cloudinary.js
-│   ├── multer.js
-│   └── cloudinaryUpload.js
+├── frontend/
+│   ├── public/
+│   ├── src/
+│   │   ├── components/
+│   │   ├── store/
+│   │   ├── styles/
+│   │   └── main.jsx
+│   └── package.json
 │
-├── middlewares/
-│   ├── checkAuthor.js
-│   └── verifyToken.js
-│
-├── models/
-│   ├── ArticleModel.js
-│   └── UserModel.js
-│
-├── services/
-│   └── authService.js
-│
-├── .env
-├── server.js
-├── package.json
 └── README.md
 ```
 
 ---
 
+# 🛠️ Tech Stack
+
+## Frontend
+- React 19
+- React Router DOM
+- Zustand
+- Tailwind CSS
+- Axios
+- React Hook Form
+- React Hot Toast
+
+## Backend
+- Node.js
+- Express.js
+- MongoDB
+- Mongoose
+- JWT Authentication
+- bcryptjs
+- Cloudinary
+- Multer
+- CORS
+
+---
+
 # 📋 Prerequisites
 
-Before running the project install:
+Before running the application, install:
 
 - Node.js (v18 or higher)
 - MongoDB
-- npm
-
----
-
-# ⚙️ Backend Setup
-
-## 1️⃣ Initialize Git Repository
-
-```bash
-git init
-```
-
----
-
-## 2️⃣ Create `.gitignore`
-
-Add:
-
-```gitignore
-node_modules
-.env
-dist
-```
+- npm or yarn
 
 ---
 
 # 📦 Install Required Packages
 
-## Main Dependencies
+## 🚀 Backend Setup
+
+Move to backend folder:
 
 ```bash
-npm install express mongoose cors dotenv bcryptjs jsonwebtoken cloudinary multer multer-storage-cloudinary cookie-parser
+cd backend
 ```
 
----
+### Install Backend Dependencies
 
-## Development Dependencies
+```bash
+npm install express mongoose cors dotenv bcryptjs jsonwebtoken cloudinary multer cookie-parser
+```
+
+### Install Development Dependencies
 
 ```bash
 npm install -D nodemon
@@ -124,27 +129,70 @@ npm install -D nodemon
 
 ---
 
-# 📦 Package Purpose
+## 🎨 Frontend Setup
 
-| Package | Purpose |
-|----------|----------|
-| express | Backend framework |
-| mongoose | MongoDB ORM |
-| cors | Cross-Origin Requests |
-| dotenv | Environment Variables |
-| bcryptjs | Password Hashing |
-| jsonwebtoken | JWT Authentication |
-| cloudinary | Cloud Image Storage |
-| multer | File Upload Middleware |
-| multer-storage-cloudinary | Cloudinary Storage Engine |
-| cookie-parser | Cookie Parsing |
-| nodemon | Auto Restart Server |
+Move to frontend folder:
+
+```bash
+cd frontend
+```
+
+### Install Frontend Dependencies
+
+```bash
+npm install react-router-dom axios zustand react-hot-toast react-hook-form
+```
+
+### Install Tailwind CSS
+
+```bash
+npm install -D tailwindcss @tailwindcss/vite
+```
 
 ---
 
-# 🔐 Environment Variables
+# ⚙️ Tailwind CSS Configuration
 
-## Create `.env`
+## Update `vite.config.js`
+
+```javascript
+import { defineConfig } from 'vite'
+import tailwindcss from '@tailwindcss/vite'
+import react from '@vitejs/plugin-react'
+
+export default defineConfig({
+  plugins: [react(), tailwindcss()],
+})
+```
+
+## Add Tailwind Import in `src/index.css`
+
+```css
+@import "tailwindcss";
+```
+
+---
+
+# 🚀 Quick Start
+
+## 1️⃣ Clone the Repository
+
+```bash
+git clone https://github.com/BAIKANI-MANASA/Blog-App.git
+cd blog-app
+```
+
+---
+
+## 2️⃣ Backend Environment Setup
+
+Move to backend:
+
+```bash
+cd backend
+```
+
+Create `.env` file:
 
 ```bash
 cp .env.example .env
@@ -158,41 +206,38 @@ copy .env.example .env
 
 ---
 
-## Update `.env`
+## 3️⃣ Configure Environment Variables
+
+Create `.env` inside backend:
 
 ```env
+# Database
 DB_URL=mongodb://localhost:27017/blog-backend
 
+# Server
 PORT=4000
 
-JWT_SECRET=your-super-secret-jwt-key
+# JWT Secret
+JWT_SECRET=your-secret-key
 
-CLOUD_NAME=your-cloudinary-cloud-name
+# Cloudinary
+CLOUD_NAME=your-cloudinary-name
 API_KEY=your-cloudinary-api-key
 API_SECRET=your-cloudinary-api-secret
 ```
 
 ---
 
-# ▶️ Run the Server
+# ▶️ Running the Application
 
-## Start Normally
-
-```bash
-node server.js
-```
-
----
-
-## Start with Nodemon
+## Start Backend Server
 
 ```bash
-npx nodemon server.js
+cd backend
+npm start
 ```
 
----
-
-# 🌐 Server URL
+Backend runs on:
 
 ```bash
 http://localhost:4000
@@ -200,31 +245,81 @@ http://localhost:4000
 
 ---
 
-# 🔗 API Endpoints
+## Start Frontend Development Server
 
-# Authentication APIs
+```bash
+cd frontend
+npm run dev
+```
 
-| Method | Endpoint | Description |
-|--------|----------|-------------|
-| POST | `/common-api/login` | Login |
-| GET | `/common-api/logout` | Logout |
-| GET | `/common-api/check-auth` | Verify Token |
-| PUT | `/common-api/change-password` | Change Password |
+Frontend runs on:
+
+```bash
+http://localhost:5173
+```
 
 ---
 
-# User APIs
+# 👨‍💼 Default Admin Account
+
+Run this in MongoDB shell:
+
+```javascript
+db.users.insertOne({
+  firstName: "admin",
+  lastName: "admin",
+  role: "ADMIN",
+  email: "admin@mail.com",
+  password: "$2a$12$zBYi4VNPbfV1qhe78SnujeiDkZ1.RkYDO6kTLx4MAj3Sshbw/cr5u",
+  isActive: true,
+  createdAt: new Date(),
+  updatedAt: new Date()
+})
+```
+
+## Admin Login
+
+```bash
+Email: admin@mail.com
+Password: admin
+```
+
+---
+
+# 👥 User Roles
+
+| Role | Permissions |
+|------|-------------|
+| USER | Read Articles & Comment |
+| AUTHOR | Create/Edit/Delete Own Articles |
+| ADMIN | Full System Access |
+
+---
+
+# 🔗 API Endpoints
+
+## Authentication APIs
+
+| Method | Endpoint | Description |
+|--------|----------|-------------|
+| POST | `/common-api/login` | Login User |
+| POST | `/common-api/logout` | Logout User |
+| GET | `/common-api/check-auth` | Check Auth Status |
+
+---
+
+## User APIs
 
 | Method | Endpoint | Description |
 |--------|----------|-------------|
 | POST | `/user-api/users` | Register User |
-| GET | `/user-api/articles` | Get Active Articles |
+| GET | `/user-api/articles` | Get Articles |
 | GET | `/user-api/article/:id` | Get Single Article |
 | PUT | `/user-api/articles` | Add Comment |
 
 ---
 
-# Author APIs
+## Author APIs
 
 | Method | Endpoint | Description |
 |--------|----------|-------------|
@@ -235,11 +330,11 @@ http://localhost:4000
 
 ---
 
-# Admin APIs
+## Admin APIs
 
 | Method | Endpoint | Description |
 |--------|----------|-------------|
-| GET | `/admin-api/dashboard/stats` | Dashboard Statistics |
+| GET | `/admin-api/dashboard/stats` | Dashboard Stats |
 | GET | `/admin-api/users` | Get Users |
 | GET | `/admin-api/articles` | Get Articles |
 | PUT | `/admin-api/users/block/:userId` | Block User |
@@ -249,213 +344,172 @@ http://localhost:4000
 
 ---
 
-# 🗄️ Database Models
+# 🏗️ Production Build
 
-# User Model
-
-```javascript
-{
-  firstName: String,
-  lastName: String,
-  email: { type: String, unique: true },
-  password: String,
-  role: {
-    type: String,
-    enum: ['USER', 'AUTHOR', 'ADMIN']
-  },
-  profileImageUrl: String,
-  isActive: Boolean
-}
-```
-
----
-
-# Article Model
-
-```javascript
-{
-  author: {
-    type: ObjectId,
-    ref: 'user'
-  },
-  title: String,
-  category: String,
-  content: String,
-  comments: [
-    {
-      user: {
-        type: ObjectId,
-        ref: 'user'
-      },
-      comment: String
-    }
-  ],
-  isArticleActive: Boolean
-}
-```
-
----
-
-# 🔐 Registration & Login Flow
-
-- USER and AUTHOR use shared authentication logic
-- Separate APIs are used for role selection
-- Role assignment is controlled by backend routes
-- JWT token is generated during login
-- Protected routes use middleware verification
-
----
-
-# 🧪 Testing APIs
-
-Use:
-
-- Postman
-- Thunder Client
-- curl
-
-Example:
+## Frontend Build
 
 ```bash
-curl http://localhost:4000/user-api/articles
+cd frontend
+npm run build
 ```
 
 ---
 
-# ⚡ Important Notes
-
-- Uses ES6 Modules
-- Enable `"type": "module"` in `package.json`
-- Configure CORS properly
-- Hash passwords using bcryptjs
-- Store uploaded images in Cloudinary
-
----
-
-# 🚀 Deploy Backend on Render
-
-## 1️⃣ Push Backend to GitHub
+## Backend Start
 
 ```bash
-git add .
-git commit -m "backend deployment"
-git branch -M main
-git remote add origin https://github.com/BAIKANI-MANASA/Blog-App.git
-git push -u origin main
+cd backend
+npm start
 ```
 
 ---
 
-# 2️⃣ Create Render Account
+# 🚀 Deploy Frontend on Vercel
 
-Go to:
-
-```bash
-https://render.com
-```
-
-Login using GitHub.
-
----
-
-# 3️⃣ Create New Web Service
-
-- Click **New +**
-- Select **Web Service**
-- Connect GitHub Repository
-- Select Backend Repository
-
----
-
-# 4️⃣ Render Configuration
-
-## Build Command
+## 1️⃣ Install Vercel CLI
 
 ```bash
-npm install
-```
-
-## Start Command
-
-```bash
-node server.js
+npm install -g vercel
 ```
 
 ---
 
-# 5️⃣ Add Environment Variables in Render
-
-Go to:
+## 2️⃣ Login to Vercel
 
 ```bash
-Dashboard → Web Service → Environment
+vercel login
 ```
 
-Add:
+---
+
+## 3️⃣ Move to Frontend Folder
+
+```bash
+cd frontend
+```
+
+---
+
+## 4️⃣ Deploy Project
+
+```bash
+vercel
+```
+
+During setup:
+
+### Framework
+
+```bash
+Vite
+```
+
+### Build Command
+
+```bash
+npm run build
+```
+
+### Output Directory
+
+```bash
+dist
+```
+
+---
+
+## 5️⃣ Production Deployment
+
+```bash
+vercel --prod
+```
+
+---
+
+# 🌐 Frontend Environment Variables
+
+Create `.env` inside frontend:
 
 ```env
-DB_URL=your-mongodb-url
+VITE_API_URL=http://localhost:4000
+```
 
-PORT=4000
+For production:
 
-JWT_SECRET=your-secret-key
-
-CLOUD_NAME=your-cloudinary-name
-API_KEY=your-cloudinary-api-key
-API_SECRET=your-cloudinary-secret
+```env
+VITE_API_URL=https://blog-app-pvm9.onrender.com
 ```
 
 ---
 
-# 6️⃣ Deploy Backend
+# ⚙️ Axios Configuration Example
 
-Click:
+```javascript
+import axios from "axios";
 
-```bash
-Create Web Service
-```
+const api = axios.create({
+  baseURL: import.meta.env.VITE_API_URL,
+});
 
-Render automatically deploys the backend.
-
----
-
-# 🌍 Backend Production URL
-
-Example:
-
-```bash
-https://blog-app-pvm9.onrender.com
+export default api;
 ```
 
 ---
 
-# 🔥 Useful Commands
+# 📄 Optional Vercel Configuration
 
-## Install Dependencies
+Create `vercel.json` inside frontend:
 
-```bash
-npm install
+```json
+{
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/"
+    }
+  ]
+}
 ```
 
-## Start Server
+This helps React Router work properly after deployment.
+
+---
+
+# 🔥 Useful Vercel Commands
+
+## Redeploy Project
 
 ```bash
-node server.js
+vercel --prod
 ```
 
-## Start with Nodemon
+## View Linked Projects
 
 ```bash
-npx nodemon server.js
+vercel project ls
 ```
 
-## Push Changes
+## Remove Deployment
 
 ```bash
-git add .
-git commit -m "updated backend"
-git push
+vercel remove
 ```
+
+## Logout from Vercel
+
+```bash
+vercel logout
+```
+
+---
+
+# 🌍 Recommended Deployment Flow
+
+1. Deploy Backend
+2. Copy Backend Production URL
+3. Add Backend URL in Frontend `.env`
+4. Deploy Frontend on Vercel
+5. Test Authentication & APIs
 
 ---
 
@@ -467,12 +521,18 @@ This project is licensed under the ISC License.
 
 # 🙏 Acknowledgments
 
+- React
 - Express.js
 - MongoDB
-- Cloudinary
-- JWT
-- Render
+- Tailwind CSS
+- Vercel
 
 ---
 
-# 🎉 Happy Coding!
+# 📞 Support
+
+If you have any questions or need help, open an issue on GitHub.
+
+---
+
+# 🎉 Happy Blogging!
